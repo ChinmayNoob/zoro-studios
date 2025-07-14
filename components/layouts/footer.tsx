@@ -6,6 +6,8 @@ import { LoadingContext } from "@/components/layouts/layout-main";
 import { TextReveal } from "../common/text-reveal";
 import { FOOTER_LINKS } from "@/constants/footer";
 import Link from "next/link";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -69,10 +71,10 @@ const Footer = () => {
     return (
         <footer
             ref={sectionRef}
-            className="bg-white min-h-screen perspective-section relative z-20"
+            className="bg-[#146321] min-h-screen perspective-section relative z-20"
         >
             <div className="w-[90%] max-w-[1440px] mx-auto pt-[4.5rem] pb-12 flex flex-col justify-between h-full">
-                <h2 className="font-anton-sc text-[11.37rem] uppercase text-background leading-[100%]">
+                <h2 className="font-anton-sc text-[11.37rem] uppercase text-white leading-[100%]">
                     <TextReveal
                         splitType="chars"
                         direction="up"
@@ -86,7 +88,7 @@ const Footer = () => {
                 <div className="flex justify-between">
                     {FOOTER_LINKS.map((links, index) => (
                         <div key={index} className="space-y-6 flex flex-col">
-                            <h4 className="font-gambetta text-2xl text-footer-links">
+                            <h4 className="font-gambetta text-2xl text-white">
                                 <TextReveal
                                     splitType="words"
                                     direction="up"
@@ -102,7 +104,7 @@ const Footer = () => {
                                     <Link
                                         key={index}
                                         href={link.href}
-                                        className="text-background text-xl leading-[130%] font-semibold"
+                                        className="text-white text-xl leading-[130%] font-semibold"
                                     >
                                         <TextReveal
                                             splitType="words"
